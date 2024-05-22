@@ -1,0 +1,11 @@
+[package]
+name = "neptune"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+task_scheduler = { path = "crates/systems/task_scheduler/" }
+asset = { path = "crates/systems/asset/" }
+utils = { path = "crates/utils/" }
+
+mimalloc = "0.1.42"
