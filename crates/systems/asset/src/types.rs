@@ -1,4 +1,9 @@
-use utils::Id;
+use id::Id;
+
+pub struct Foreign {
+    pub id: Id,
+    pub data: Vec<u32>,
+}
 
 pub struct Texture {
     pub id: Id,

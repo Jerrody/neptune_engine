@@ -1,11 +1,22 @@
-[package]
-name = "neptune"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+resolver = "2"
 
-[dependencies]
+members = [
+    "crates/neptune/",
+    "crates/systems/asset",
+    "crates/systems/task_scheduler/",
+    "crates/utils/error/",
+    "crates/utils/logging/",
+    "crates/utils/id/",
+]
+
+[workspace.dependencies]
+asset = { path = "crates/systems/asset" }
 task_scheduler = { path = "crates/systems/task_scheduler/" }
-asset = { path = "crates/systems/asset/" }
-utils = { path = "crates/utils/" }
+error = { path = "crates/utils/error/" }
+logging = { path = "crates/utils/logging/" }
+id = { path = "crates/utils/id/" }
 
-mimalloc = "0.1.42"
+winit = "0.30.0"
+surrealdb = { version = "1.5.0", default-features = false, features = ["kv-speedb"]}
+rkyv = { version = "0.7.44", features = ["strict"] }

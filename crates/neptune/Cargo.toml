@@ -1,0 +1,11 @@
+[package]
+name = "neptune"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+task_scheduler.workspace = true
+asset.workspace = true
+id.workspace = true
+
+mimalloc = "0.1.42"
